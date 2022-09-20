@@ -7,16 +7,10 @@ target 'RxSwiftSPMCocoaPodsTest' do
   use_frameworks!
 
   # Pods for RxSwiftSPMCocoaPodsTest
-  pod 'RxSwift', '5.1.1'
-  pod 'RxCocoa'
-  pod 'RxWebKit'
 
   target 'RxSwiftSPMCocoaPodsTestTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'RxSwift', '5.1.1'
-    pod 'RxCocoa'
-    pod 'RxWebKit'
 
   end
 
