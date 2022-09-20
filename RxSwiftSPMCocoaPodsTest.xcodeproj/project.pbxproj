@@ -19,6 +19,9 @@
 		12E6758428D95A2900D38652 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 12E6758328D95A2900D38652 /* MyLibrary */; };
 		4169165B96D9A82B9F53E181 /* Pods_RxSwiftSPMCocoaPodsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 340EF36E876C3ED6442144E5 /* Pods_RxSwiftSPMCocoaPodsTest.framework */; };
 		6CF23452BA84C5DA489A69EF /* Pods_RxSwiftSPMCocoaPodsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F27778A9388A204983FE2E /* Pods_RxSwiftSPMCocoaPodsTestTests.framework */; };
+		8340FC6128D9F62E00329988 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8340FC6028D9F62E00329988 /* RxCocoa */; };
+		8340FC6328D9F62E00329988 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8340FC6228D9F62E00329988 /* RxSwift */; };
+		8340FC6628D9F64900329988 /* RxWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8340FC6528D9F64900329988 /* RxWebKit */; };
 		D9FFE5F4697D78AC9D4DE4BE /* Pods_RxSwiftSPMCocoaPodsTest_RxSwiftSPMCocoaPodsTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D94332FACF54B2B45E004F2 /* Pods_RxSwiftSPMCocoaPodsTest_RxSwiftSPMCocoaPodsTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,8 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8340FC6128D9F62E00329988 /* RxCocoa in Frameworks */,
 				12E6758428D95A2900D38652 /* MyLibrary in Frameworks */,
+				8340FC6328D9F62E00329988 /* RxSwift in Frameworks */,
 				4169165B96D9A82B9F53E181 /* Pods_RxSwiftSPMCocoaPodsTest.framework in Frameworks */,
+				8340FC6628D9F64900329988 /* RxWebKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +204,9 @@
 			name = RxSwiftSPMCocoaPodsTest;
 			packageProductDependencies = (
 				12E6758328D95A2900D38652 /* MyLibrary */,
+				8340FC6028D9F62E00329988 /* RxCocoa */,
+				8340FC6228D9F62E00329988 /* RxSwift */,
+				8340FC6528D9F64900329988 /* RxWebKit */,
 			);
 			productName = RxSwiftSPMCocoaPodsTest;
 			productReference = 12E6754E28D9561500D38652 /* RxSwiftSPMCocoaPodsTest.app */;
@@ -273,6 +282,10 @@
 				Base,
 			);
 			mainGroup = 12E6754528D9561500D38652;
+			packageReferences = (
+				8340FC5F28D9F62E00329988 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8340FC6428D9F64900329988 /* XCRemoteSwiftPackageReference "RxWebKit" */,
+			);
 			productRefGroup = 12E6754F28D9561500D38652 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -736,10 +749,44 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		8340FC5F28D9F62E00329988 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.1;
+			};
+		};
+		8340FC6428D9F64900329988 /* XCRemoteSwiftPackageReference "RxWebKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxWebKit";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		12E6758328D95A2900D38652 /* MyLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MyLibrary;
+		};
+		8340FC6028D9F62E00329988 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8340FC5F28D9F62E00329988 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8340FC6228D9F62E00329988 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8340FC5F28D9F62E00329988 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		8340FC6528D9F64900329988 /* RxWebKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8340FC6428D9F64900329988 /* XCRemoteSwiftPackageReference "RxWebKit" */;
+			productName = RxWebKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
